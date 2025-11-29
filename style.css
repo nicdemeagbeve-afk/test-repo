@@ -1,0 +1,945 @@
+/*
+  Réinitialisation CSS pour une base solide.
+  Ceci est essentiel pour un comportement responsive prévisible et ne "casse" pas le code,
+  mais le corrige pour fonctionner correctement sur toutes les tailles d'écran.
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.home{
+    color: goldenrod;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(26, 109, 165);
+    height: 80px;
+    align-items: center;
+    color: rgb(235, 245, 238) !important;
+    padding: 0 20px;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(235, 245, 238);
+    color: rgb(40, 48, 68);
+    font-size: 20px;
+    font-size: 1.25rem;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+a{
+    text-decoration: none;
+    color: rgb(27, 154, 170);
+}
+header a {
+    color: rgb(235, 245, 238);
+}
+header button{
+    background-color: rgb(27, 154, 170);
+    color: rgb(235, 245, 238);
+    border: none;
+    margin-left: 30px;
+    height: 35px;
+    width: 155px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+header button:hover {
+    background-color: rgb(22, 124, 138);
+}
+
+/* Section HERO : Ajustement pour le responsive */
+section.tete{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(40, 48, 68);
+    color: rgb(235, 245, 238);
+    align-items: center;
+    padding: 50px 20px;
+    padding-left: 20px;
+    gap: 40px;
+}
+#entete, #image {
+    flex: 1;
+    min-width: 300px;
+}
+#image img{
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    border-radius: 20px;
+    border-radius: 1.25em;
+    display: block;
+    margin: 0 auto;
+}
+strong{
+    color: rgb(27, 154, 170);
+}
+
+.first{
+    background-color: rgb(27, 154, 170);
+    color: rgb(235, 245, 238);
+    padding: 10px 15px;
+    border: none;
+    width:160px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.first a {
+    color: rgb(235, 245, 238);
+}
+.first:hover{
+    background-color: rgb(22, 124, 138);
+}
+.second{
+    background-color: transparent;
+    color: rgb(235, 245, 238);
+    border: 1px solid rgb(235, 245, 238);
+    margin-top: 25px;
+    margin-left: 20px;
+    padding: 10px 15px;
+    width:160px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.second a {
+    color: rgb(235, 245, 238);
+}
+.second:hover {
+    background-color: rgb(235, 245, 238);
+    color: rgb(40, 48, 68);
+}
+.second:hover a {
+    color: rgb(40, 48, 68);
+}
+
+/* Styles pour le contenu du héros. */
+#entete{
+    text-align: left !important;
+    padding-left: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+#entete h3, #entete h4, #entete h1{
+    padding-bottom: 15px;
+}
+#entete h1, #entete h4{
+    font-size: 48px;
+    font-size: 3rem;
+}
+#entete p{
+    padding-right: 0;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Section À PROPOS DE MOI : Refonte pour le responsive */
+#A-Propos{
+    background-color: rgb(235, 245, 238);
+    color: rgb(40, 48, 68);
+    padding: 50px 20px;
+    text-align: center;
+}
+.reel{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.reel h1, .serv h1{
+    padding-bottom: 25px;
+    padding-top: 25px;
+    font-size: 38px;
+}
+.reel p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#A-Propos ul{
+    list-style: none;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
+}
+#A-Propos ul li {
+    margin-bottom: 10px;
+}
+
+/* Section des chiffres : Responsive */
+/* Mise en page des blocs de chiffres. */
+.real{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.real > div {
+    flex: 1;
+    min-width: 180px;
+    max-width: 250px;
+    margin-bottom: 25px;
+    text-align: center;
+    background-color: rgb(235, 245, 238);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.nom1 , .nom2 , .nom3{
+    font-size: 65px;
+    font-style: oblique;
+    font-weight: bolder;
+    color: rgb(27, 154, 170);
+    margin-top: 0;
+}
+.real div p:last-child {
+    font-size: 18px;
+    color: rgb(40, 48, 68);
+}
+
+/* Section SERVICES : Responsive */
+#Services{
+    background-color: rgb(193, 207, 243);
+    padding: 50px 20px;
+    height: auto;
+}
+.serv{
+    text-align: center;
+    padding-bottom: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.serv h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+.serv p {
+    line-height: 1.6;
+}
+.service{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.service > div {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 30px;
+    background-color: rgb(235, 245, 238);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    text-align: center;
+}
+.service i{
+    padding: 0;
+    margin-bottom: 15px;
+    color: rgb(27, 154, 170);
+}
+.service h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: rgb(40, 48, 68);
+}
+.service p{
+    text-align: center;
+    line-height: 1.5;
+    color: rgb(40, 48, 68);
+}
+
+/* Section RÉALISATIONS : Refonte pour le responsive */
+#realisations{
+    background-color: rgb(193, 207, 243);
+    padding-bottom: 50px;
+}
+.realis{
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgb(40, 48, 68);
+    color: rgb(235, 245, 238);
+    margin-bottom: 50px;
+}
+.realis h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+.realis p {
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+/* Mise en page des réalisations. */
+.realisez{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* Styles pour chaque carte de réalisation. */
+.realisez > div {
+    width: 100%;
+    max-width: 270px;
+    margin-bottom: 35px;
+    background-color: rgb(235, 245, 238);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.realisez img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 15px;
+}
+.realisez h3{
+    font-size: 24px;
+    color: rgb(40, 48, 68);
+    margin-bottom: 5px;
+}
+.realisez p{
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+.realisez a {
+    color: rgb(27, 154, 170);
+    font-size: 20px;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.realisez a:hover {
+    background-color: rgba(27, 154, 170, 0.1);
+}
+
+/* Section COMPÉTENCES : Responsive */
+#competences{
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.comp h1{
+    margin-bottom: 15px;
+    font-size: 38px;
+}
+.comp p{
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
+/* Mise en page des barres de compétences. */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 900px; 
+    margin: 40px auto;
+}
+.skills-column {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+}
+.skill-item {
+    margin-bottom: 25px;
+    text-align: left;
+}
+.skill-title {
+    font-weight: bold;
+    color: rgb(40, 48, 68);
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+.skill-bar-bg {
+    width: 100%;
+    background-color: rgba(40, 48, 68, 0.1);
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.skill-level {
+    background-color: rgb(27, 154, 170);
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.8s ease-in-out;
+}
+.skill-percent {
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+    font-size: 14px;
+    color: rgb(40, 48, 68);
+    font-weight: bold;
+}
+
+/* Section TÉMOIGNAGES : Responsive */
+#temoignages{
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+#temoignages h1 {
+    font-size: 38px;
+    margin-bottom: 40px;
+}
+/* Conteneur du carrousel des témoignages. */
+.carousel-container {
+    position: relative;
+    max-width: 700px; 
+    margin: auto;
+    background-color: rgb(235, 245, 238);
+    padding: 30px 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mySlides {
+    display: none;
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+}
+.testimonial-content .quote {
+    font-size: 20px;
+    font-style: italic;
+    color: rgb(40, 48, 68);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+.testimonial-content .author {
+    font-weight: bold;
+    color: rgb(27, 154, 170);
+    font-size: 18px;
+}
+/* Styles des flèches de navigation. */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 15px;
+    margin-top: -22px;
+    color: rgb(40, 48, 68);
+    font-size: 24px;
+    transition: 0.6s ease;
+    border-radius: 50%; 
+    user-select: none;
+    background-color: rgba(27, 154, 170, 0.2);
+    border: none;
+    z-index: 10;
+}
+.next {
+    right: -25px;
+}
+.prev {
+    left: -25px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(27, 154, 170, 0.5);
+    color: rgb(235, 245, 238);
+}
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: rgba(40, 48, 68, 0.3);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: rgb(27, 154, 170);
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Section CONTACT : Responsive */
+#contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.my, .formulaire {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    text-align: left;
+}
+.my h1{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 38px;
+}
+.my p{
+    margin-bottom: 15px;
+    line-height: 1.6;
+    text-align: center;
+}
+.my p i {
+    margin-right: 10px;
+    color: rgb(27, 154, 170);
+}
+.my p a {
+    color: rgb(40, 48, 68);
+    transition: color 0.3s ease;
+}
+.my p a:hover {
+    color: rgb(27, 154, 170);
+}
+.reseau{
+    margin-top: 30px;
+    text-align: center;
+}
+.reseau a{
+    padding: 0 15px;
+    color: rgb(40, 48, 68);
+    transition: color 0.3s ease;
+}
+.reseau a:hover {
+    color: rgb(27, 154, 170);
+}
+.formulaire h1{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 38px;
+}
+/* Styles pour le formulaire de contact. */
+form{
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    padding: 20px;
+    background-color: rgb(235, 245, 238);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+form div{
+    margin-bottom: 20px;
+}
+label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: rgb(40, 48, 68);
+}
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+    width: 100%;           
+    padding: 12px;        
+    border: 1px solid rgba(40, 48, 68, 0.2);
+    border-radius: 4px;  
+    box-sizing: border-box; 
+    font-size: 16px;
+    color: rgb(40, 48, 68);
+    transition: border-color 0.3s ease;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    border-color: rgb(27, 154, 170);
+    outline: none;
+}
+textarea {
+    resize: vertical;
+}
+form button {
+    padding: 12px 25px;
+    background-color: rgb(27, 154, 170);
+    color: rgb(235, 245, 238);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: auto;
+    display: block;
+    margin: 20px auto 0 auto;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+form button:hover {
+    background-color: rgb(22, 124, 138);
+    transform: translateY(-2px);
+}
+
+/* FOOTER : Responsive */
+footer{
+    background-color: rgb(40, 48, 68);
+    color: rgb(235, 245, 238);
+    padding: 40px 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+/* Mise en page des liens du pied de page. */
+.sect1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 0 auto 30px auto;
+    max-width: 1200px;
+}
+.sect1 .home {
+    flex-basis: auto;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+.sect1 li a {
+    color: rgb(235, 245, 238);
+    transition: color 0.3s ease;
+}
+.sect1 li a:hover {
+    color: rgb(27, 154, 170);
+}
+.sect1 ul{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+.sect1 li {
+    margin: 0;
+}
+/* Styles pour les informations de contact du pied de page. */
+.sect2{
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+}
+.sect2 p{
+    margin-bottom: 20px;
+}
+.sect2 div a{
+    padding: 0 15px;
+    color: rgb(235, 245, 238);
+    transition: color 0.3s ease;
+}
+.sect2 div a:hover {
+    color: rgb(27, 154, 170);
+}
+
+/* Styles pour l'icône de menu (mobile). */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: rgb(235, 245, 238);
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    z-index: 20;
+}
+
+/* MEDIA QUERIES : Adaptations spécifiques pour les écrans de tablette et plus petits */
+@media (max-width: 1024px) {
+    header {
+        padding: 0 15px;
+    }
+    nav ul {
+        gap: 10px;
+    }
+    header button {
+        margin-left: 15px;
+    }
+
+    #entete h1, #entete h4{
+        font-size: 42px;
+    }
+
+    .real > div {
+        min-width: 220px;
+        max-width: 300px;
+    }
+    .nom1, .nom2, .nom3 {
+        font-size: 60px;
+    }
+
+    .service > div {
+        min-width: 220px;
+    }
+    .realisez > div {
+        max-width: 300px;
+    }
+}
+
+/* MEDIA QUERIES : Adaptations spécifiques pour les écrans de téléphone et plus petits */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-end;
+        width: 100%;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(40, 48, 68);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 20px 0;
+        text-align: center;
+        gap: 20px;
+        z-index: 10;
+    }
+    nav.nav-active ul {
+        display: flex !important;
+    }
+    header button {
+        margin: 0;
+    }
+    .home {
+        font-size: 24px;
+        position: absolute;
+        left: 20px;
+        top: 25px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+
+    section.tete {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 15px;
+        gap: 30px;
+    }
+    #entete {
+        text-align: center;
+        padding-left: 0;
+    }
+    #entete h1, #entete h4{
+        font-size: 36px;
+    }
+    #entete h3 {
+        font-size: 18px;
+    }
+    .first, .second {
+        width: 140px;
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+    .second {
+        margin-left: 10px;
+    }
+
+    .reel h1, .serv h1, .realis h1, #temoignages h1, .my h1, .formulaire h1 {
+        font-size: 32px;
+    }
+    .real {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .real > div {
+        max-width: 90%;
+    }
+    .nom1, .nom2, .nom3 {
+        font-size: 50px;
+    }
+
+    .service {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .service > div {
+        max-width: 90%;
+        padding: 25px;
+    }
+
+    .realisez {
+        padding: 0 15px;
+    }
+    .realisez > div {
+        max-width: 90%;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .skills-column {
+        max-width: 90%;
+    }
+    #competences {
+        padding: 40px 15px;
+    }
+
+    .carousel-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+    .prev, .next {
+        font-size: 20px;
+        padding: 10px;
+        right: -15px;
+        left: -15px;
+    }
+    .testimonial-content .quote {
+        font-size: 16px;
+    }
+    .testimonial-content .author {
+        font-size: 16px;
+    }
+
+    #contact {
+        flex-direction: column;
+        padding: 50px 15px;
+        gap: 40px;
+    }
+    .my, .formulaire {
+        max-width: 95%;
+    }
+    .my p {
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 300px;
+    }
+    .my p:first-of-type {
+        text-align: center;
+    }
+    .reseau {
+        text-align: center;
+    }
+    form {
+        padding: 15px;
+    }
+
+    footer {
+        padding: 30px 15px;
+    }
+    .sect1 {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .sect1 ul {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .sect1 .home {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+        font-size: 22px;
+    }
+    .sect2 p {
+        margin-bottom: 15px;
+    }
+    .sect2 div a {
+        padding: 0 10px;
+    }
+}
+
+/* Adaptations pour les très petits écrans de téléphone */
+@media (max-width: 480px) {
+    #entete h1, #entete h4{
+        font-size: 30px;
+    }
+    .first, .second {
+        display: block;
+        margin: 15px auto;
+    }
+    .second {
+        margin-top: 10px;
+    }
+
+    .real > div {
+        min-width: 100%;
+        padding: 15px;
+    }
+    .nom1, .nom2, .nom3 {
+        font-size: 45px;
+    }
+
+    .service > div {
+        min-width: 100%;
+        padding: 20px;
+    }
+
+    .realisez > div {
+        min-width: 100%;
+        padding: 0 0 15px 0;
+    }
+    .realisez img {
+        height: 200px;
+    }
+    .realisez h3 {
+        font-size: 20px;
+    }
+
+    .skills-column {
+        min-width: 100%;
+    }
+
+    .carousel-container {
+        padding: 15px;
+    }
+    .prev, .next {
+        padding: 8px;
+        font-size: 18px;
+        right: -10px;
+        left: -10px;
+    }
+
+    .my p, .reel p {
+        font-size: 16px;
+    }
+}
