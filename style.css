@@ -186,6 +186,43 @@ strong{
     margin-bottom: 10px;
 }
 
+/* Blocs de présentation dans "À Propos" */
+.about-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about-block {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(40, 48, 68, 0.08);
+}
+.about-block i {
+    color: rgb(27, 154, 170);
+    margin-bottom: 15px;
+}
+.about-block h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: rgb(40, 48, 68);
+}
+.about-block p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(80, 80, 80);
+}
+
+
 /* Section des chiffres : Responsive */
 /* Mise en page des blocs de chiffres. */
 .real{
@@ -194,7 +231,7 @@ strong{
     justify-content: center;
     gap: 30px;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 50px auto 0 auto;
 }
 .real > div {
     flex: 1;
@@ -205,7 +242,12 @@ strong{
     background-color: rgb(235, 245, 238);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(40, 48, 68, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.real > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(40, 48, 68, 0.2);
 }
 .nom1 , .nom2 , .nom3{
     font-size: 65px;
@@ -253,8 +295,13 @@ strong{
     padding: 30px;
     background-color: rgb(235, 245, 238);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(40, 48, 68, 0.1);
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service > div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 28px rgba(40, 48, 68, 0.2);
 }
 .service i{
     padding: 0;
@@ -310,10 +357,15 @@ strong{
     margin-bottom: 35px;
     background-color: rgb(235, 245, 238);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(40, 48, 68, 0.1);
     overflow: hidden;
     text-align: center;
     padding-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.realisez > div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 28px rgba(40, 48, 68, 0.2);
 }
 .realisez img{
     width: 100%;
@@ -394,6 +446,7 @@ strong{
     align-items: center;
 }
 .skill-level {
+    width: 0;
     background-color: rgb(27, 154, 170);
     height: 100%;
     border-radius: 4px;
